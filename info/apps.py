@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class InfoConfig(AppConfig):
-    name = 'Info'
+    name = 'info'
