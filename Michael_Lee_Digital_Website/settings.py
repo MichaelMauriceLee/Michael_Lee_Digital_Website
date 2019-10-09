@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'xaiu&gw)@hl%mw-an6rx720+u3s&lde6-kr@b^f5m)+^ad@8^='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['michael-lee.digital', '157.230.150.53']
 
