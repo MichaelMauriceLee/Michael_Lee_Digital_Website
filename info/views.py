@@ -4,7 +4,16 @@ from .models import Product
 
 def index(request):
     products = Product.objects.all()
-    return render(request, 'index.html', {'products': products})
+    return render(request, 'home.html', {'products': products})
 
 
+def about(request):
+    return render(request, 'about.html')
 
+
+def projects(request):
+    return render(request, 'projects.html')
+
+
+def contact(request):
+    return render(request, 'contact.html')
