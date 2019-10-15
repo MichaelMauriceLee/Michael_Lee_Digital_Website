@@ -1,6 +1,30 @@
 {% extends 'base.html' %}
 
 {% block content %}
+         {% load static %}
+    <link rel="stylesheet" href="{% static 'css/info.css' %}">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     <h1 class="text-center text-white bg-dark">About Me</h1>
     <h3 class="text-center text-white bg-dark">Summary</h3>
     <p class="text-white bg-dark">
@@ -9,7 +33,10 @@
         Java. Demonstrates leadership, organization, good teamwork skills, persistence, and accountability through work
         experience and extracurricular activities.
     </p>
-
+    <h3 class="text-center text-white bg-dark">Computer Skills</h3>
+    <p class="text-white bg-dark">
+        Microsoft Office (Word, Excel, PowerPoint), Java, C++, Python, Git, HTML, CSS, JavaScript.
+    </p>
     <h3 class="text-center text-white bg-dark">Work Experience</h3>
     <h4 class="text-white bg-dark">
         Intern, Facilities Engineering
@@ -63,20 +90,5 @@
         - Organized various well services and rig work when wells were down.
     </p>
 
-    <h4 class="text-white bg-dark">
-         Leader
-    </h4>
-    <h6 class="text-white bg-dark">  Mini University Summer Camps (University of Calgary) July 2015-August 2015</h6>
-    <p class="text-white bg-dark">
-         - Operated 34 heavy oil wells in Marshall and Lone Rock oil fields within Lloydminster district.
-    </p>
-    <p class="text-white bg-dark">
-        - Supervised young attendees, prepared new activities and assisted camp instructors in teaching new skills.
-    </p>
-
-    <h3 class="text-center text-white bg-dark">Computer Skills</h3>
-    <p class="text-white bg-dark">
-        Microsoft Office (Word, Excel, PowerPoint), Java, C++, Python, Git, HTML, CSS, JavaScript.
-    </p>
 
 {% endblock %}
