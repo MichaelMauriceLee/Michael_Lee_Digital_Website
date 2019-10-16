@@ -1,30 +1,30 @@
 {% extends 'base.html' %}
 
 {% block content %}
-         {% load static %}
+    {% load static %}
     <link rel="stylesheet" href="{% static 'css/info.css' %}">
     <nav class="navbar navbar-expand-lg navbar-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <h1 class="text-center text-white bg-dark">About Me</h1>
     <h3 class="text-center text-white bg-dark">Summary</h3>
     <p class="text-white bg-dark">
@@ -45,50 +45,39 @@
     <p class="text-white bg-dark">
         - Designed meter station installations, upgrades and removals within ATCO’s natural gas transmission system in
         Alberta.
-    </p>
-    <p class="text-white bg-dark">
+        <br>
         - Worked on several projects simultaneously from project conception to completion.
-    </p>
-    <p class="text-white bg-dark">
+        <br>
         - Worked with third-party contractors, field operations, drafting and construction crews on projects.
-    </p>
-    <p class="text-white bg-dark">
+        <br>
         - Designed meter station layouts, prepared drawings and job procedures and calculated equipment sizing for
         pressure control and pipeline.
-    </p>
-    <p class="text-white bg-dark">
+        <br>
         - Selected material for piping and station equipment installation.
     </p>
+
     <p class="text-white bg-dark">
         Some of my major projects include:
-    </p>
-    <p class="text-white bg-dark">
+        <br>
         - Designed a brand-new meter station to replace an old meter station with an estimated budget of $350k.
-    </p>
-    <p class="text-white bg-dark">
+        <br>
         - Removed a meter station from project conception to land reclamation on budget ($200K) and on time.
-    </p>
-    <p class="text-white bg-dark">
+        <br>
         - Completed a tight deadline project (1 week) to check and ensure the accuracy of a job procedure for a $1
         million project.
-    </p>
 
     <h4 class="text-white bg-dark">
         Summer Student, Relief Operator
     </h4>
     <h6 class="text-white bg-dark"> Canadian Natural Resources Limited (Lloydminster) May 2016-August 2016</h6>
     <p class="text-white bg-dark">
-         - Operated 34 heavy oil wells in Marshall and Lone Rock oil fields within Lloydminster district.
-    </p>
-    <p class="text-white bg-dark">
-          - Performed normal maintenance and production data entry.
-    </p>
-    <p class="text-white bg-dark">
-           - Optimized heavy oil wells which included shooting fluid level and adjusting pump speeds.
-    </p>
-    <p class="text-white bg-dark">
+        - Operated 34 heavy oil wells in Marshall and Lone Rock oil fields within Lloydminster district.
+        <br>
+        - Performed normal maintenance and production data entry.
+        <br>
+        - Optimized heavy oil wells which included shooting fluid level and adjusting pump speeds.
+        <br>
         - Organized various well services and rig work when wells were down.
     </p>
-
 
 {% endblock %}
