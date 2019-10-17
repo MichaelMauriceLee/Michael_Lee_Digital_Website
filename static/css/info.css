@@ -1,15 +1,21 @@
 .carousel {
-  width:100%;
+    width: 100%;
 }
 
 .carousel img {
-      width:100%;
-    }
-
-html, body {
-    height: 100%;
-    overflow: auto
+    width: 100%;
 }
+
+body {
+    min-height: 100vh;
+    overflow: auto;
+}
+
+html {
+    min-height: 100%;
+}
+
 .container {
-    height: calc(100% - 56px);
+    min-height: calc(100vh - 56px);
+    overflow: auto
 }
