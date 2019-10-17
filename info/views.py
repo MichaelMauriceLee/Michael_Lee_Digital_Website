@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from .models import Product
+from .models import Project
 
 
 def index(request):
-    products = Product.objects.all()
-    return render(request, 'home.html', {'products': products})
+
+    return render(request, 'home.html')
 
 
 def about(request):
@@ -12,7 +12,8 @@ def about(request):
 
 
 def projects(request):
-    return render(request, 'projects.html')
+    projects = Project.objects.all()
+    return render(request, 'projects.html', {'projects': projects})
 
 
 def contact(request):
