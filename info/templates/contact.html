@@ -4,29 +4,67 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/info.css' %}">
     <nav class="navbar navbar-expand-lg navbar-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/projects">Projects</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/contact">Contact<span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects">Projects</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/contact">Contact<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <h1 class="text-center text-white bg-dark">Contact Me</h1>
-    <p class="text-white bg-dark">
-    Email: lee18@ucalgary.ca
-    </p>
+    <h4 class="text-center text-white bg-dark">Want to get in touch?  Fill out the form below and let's talk.</h4>
+    <script src="{% static 'js/contact.js' %}"></script>
+
+    <form class="needs-validation" novalidate action="https://formspree.io/lee18@ucalgary.ca" method="POST">
+        <div class="form-group">
+            <label for="email" class="text-white bg-dark">Email address</label>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                   placeholder="Enter email" required>
+            <small id="emailHelp" class="form-text text-muted">Your email address won't be shared with anyone
+                else.</small>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please enter your email address.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="subject" class="text-white bg-dark">Subject</label>
+            <input type="subject" name="subject" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                   placeholder="Enter subject" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please enter a message about the subject.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="measure" class="text-white bg-dark">Message</label>
+            <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="12"
+                      placeholder="Enter message" required></textarea>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please enter a message.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 {% endblock %}
