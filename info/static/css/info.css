@@ -19,3 +19,15 @@ html {
     min-height: calc(100vh - 56px);
     overflow: auto
 }
+
+/*.card {*/
+/*    min-height: 500px;*/
+/*}*/
+
+.top-buffer { margin-top:20px; }
+
+/*.card-img-top {*/
+/*    max-height: 500px;*/
+/*    min-height: 300px;*/
+/*    object-fit: cover;*/
+/*}*/

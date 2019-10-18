@@ -1,82 +1,369 @@
 {% extends 'base.html' %}
 
 {% block content %}
-     {% load static %}
+    {% load static %}
     <link rel="stylesheet" href="{% static 'css/info.css' %}">
 
     <nav class="navbar navbar-expand-lg navbar-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/projects">Projects<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/projects">Projects<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <h1 class="text-center text-white bg-dark">My Projects</h1>
-    <h4 class="text-white bg-dark">In addition to my projects in my work as an engineer in the energy
-        sector, I had also developed various software personal projects I have created. Clicking on the link will open a
-        new window
-        to the project's respective GitHub Repository.</h4>
-{#    <div class="container">#}
-        <div class="row">
-            <div class="col">
-                <a href="https://github.com/MichaelMauriceLee/Tic-Tac-Toe" target="_blank" class="btn btn-primary btn-lg" role="button">Tic-Tac-Toe
-                    with AI players</a>
+    <h4 class=" text-center text-white bg-dark">Check out the various personal projects I've created.</h4>
+    <div class="row">
+        <div class="col text-center">
+            <p class="text-white bg-dark"> This website's source code</p>
+            <a href=https://github.com/MichaelMauriceLee/Michael_Lee_Digital_Website target="_blank"
+               class="btn btn-primary btn-lg" role="button">View Code</a>
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col top-buffer">
+            <div class="card mx-auto" style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'images/ff14_race_identifer_sm.JPG' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Tensorflow Real Time Object Detection Program</h5>
+                    <p class="card-text">Real time object detection of races from the game Final Fantasy 14.</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#ff14_race_identifer">
+                        See details
+                    </button>
+                    <a href="https://github.com/MichaelMauriceLee/FF14-Race-Identifer" target="_blank"
+                       class="btn btn-primary"
+                       role="button">View Code
+                    </a>
+                    <div class="modal fade" id="ff14_race_identifer" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Tensorflow Real Time Object
+                                        Detection Program</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="card-img-top " src="{% static 'images/ff14_race_identifer.JPG' %}"
+                                         alt="Card image cap">
+                                    <p>
+                                        Real time object detection of races from the game Final Fantasy 14.
+                                    </p>
+                                    <p>
+                                        The frozen inference model was created by using Tensorflow's Object Detection
+                                        API and retraining Google's faster_rcnn_inception_v2_coco_2018_01_28 model to
+                                        detect any images on the computer screen of any character from Final Fantasy 14
+                                        and display the information of the character's race and gender on screen.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a href="https://github.com/MichaelMauriceLee/FF14-Race-Identifer" target="_blank"
+                                       class="btn btn-primary"
+                                       role="button">View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <a href="https://github.com/MichaelMauriceLee/Airline-Reservation-App" target="_blank" class="btn btn-primary btn-lg"
-                   role="button">Airline Reservation App</a>
+        <div class="col top-buffer">
+            <div class="card mx-auto" style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'images/shiny_colors_bot_sm.JPG' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Event-Driven Mobile Game Bot with GUI</h5>
+                    <p class="card-text">Bot for the mobile game アイドルマスターシャイニ―カラーズ.</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shiny_colors_bot">
+                        See details
+                    </button>
+                    <a href="https://github.com/MichaelMauriceLee/Shiny-Colors-Bot-1920-x-1080" target="_blank"
+                       class="btn btn-primary"
+                       role="button">View Code
+                    </a>
+                    <div class="modal fade" id="shiny_colors_bot" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Event-Driven Mobile Game Bot with
+                                        GUI</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="card-img-top " src="{% static 'images/shiny_colors_bot.JPG' %}"
+                                         alt="Card image cap">
+                                    <p>
+                                        Bot for the mobile game アイドルマスターシャイニ―カラーズ.
+                                    </p>
+                                    <p>
+                                        Built using Python OpenCV, tkinter. This program opens up a GUI for user's to
+                                        configure settings and allows the user to start and stop the program. The bot
+                                        continually scans the play area, and when a series of buttons pops up, uses the
+                                        mouse to click on the buttons in a set sequence. No files are injected into the
+                                        game, as the bot uses on screen pixel data to make decisions.
+                                    </p>
+                                    <p>
+                                        Note that this program only works with screen resolutions around 1920 x 1080 px.
+                                        The bot will only recognize images when around 80% of the image on screen
+                                        matches the image stored in its database.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a href="https://github.com/MichaelMauriceLee/Shiny-Colors-Bot-1920-x-1080"
+                                       target="_blank"
+                                       class="btn btn-primary"
+                                       role="button">View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <a href="https://github.com/MichaelMauriceLee/Inventory-Management-App" target="_blank" class="btn btn-primary btn-lg"
-                   role="button">Retail Shop Inventory Management App</a>
+        <div class="col top-buffer">
+            <div class="card mx-auto" style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'images/inventory_management_sm.JPG' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Inventory Management App</h5>
+                    <p class="card-text">Retail store inventory management app. Made in Java.</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#inventorymanagement">
+                        See details
+                    </button>
+                    <a href="https://github.com/MichaelMauriceLee/Inventory-Management-App" target="_blank"
+                       class="btn btn-primary"
+                       role="button">View Code
+                    </a>
+                    <div class="modal fade" id="inventorymanagement" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Inventory Management App</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="card-img-top " src="{% static 'images/inventory_management.JPG' %}"
+                                         alt="Card image cap">
+                                    <p>
+                                        Retail store inventory management app. Made in Java.
+                                    </p>
+                                    <p>
+                                        The app runs in the terminal. At startup, the app parses data from tools.txt and
+                                        suppliers.txt (which at like databases) and creates a list of these items to be
+                                        used in the app.
+                                    </p>
+                                    <p>
+                                        Features a main menu with abilities such as checking tool stock, creating orders
+                                        and writing the orders to orders.txt.
+                                    </p>
+                                    <p>
+                                        All files in the src folder.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a href="https://github.com/MichaelMauriceLee/Inventory-Management-App"
+                                       target="_blank"
+                                       class="btn btn-primary"
+                                       role="button">View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <a href="https://github.com/MichaelMauriceLee/Student-Registration-App" target="_blank" class="btn btn-primary btn-lg"
-                   role="button">Student Registration App</a>
+    </div>
+    <div class="row top-buffer">
+        <div class="col top-buffer">
+            <div class="card mx-auto" style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'images/tic-tac-toe_sm.JPG' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Tic-Tac-Toe</h5>
+                    <p class="card-text">Tic-Tac-Toe game made in Java with AI players.</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tictactoe">
+                        See details
+                    </button>
+                    <a href="https://github.com/MichaelMauriceLee/Tic-Tac-Toe" target="_blank"
+                       class="btn btn-primary"
+                       role="button">View Code
+                    </a>
+                    <div class="modal fade" id="tictactoe" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Tic-Tac-Toe</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="card-img-top " src="{% static 'images/tic-tac-toe.JPG' %}"
+                                         alt="Card image cap">
+                                    <p>
+                                        Tic-Tac-Toe game made in Java with AI players.
+                                    </p>
+                                    <p>
+                                        The game runs in the terminal, asks for the names for the players, lets the
+                                        human
+                                        player choose the difficulty of the AI and then starts the game.
+                                    </p>
+                                    <p>
+                                        All files in the src folder.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                    </button>
+                                    <a href="https://github.com/MichaelMauriceLee/Tic-Tac-Toe" target="_blank"
+                                       class="btn btn-primary"
+                                       role="button">View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <a href="https://github.com/MichaelMauriceLee/FF14-Race-Identifer" target="_blank" class="btn btn-primary btn-lg"
-                   role="button">Tensorflow Real Time Object Detection
-                    Program</a>
+        <div class="col top-buffer">
+            <div class="card mx-auto" style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'images/student_rep_app_sm.JPG' %}"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Student Registration App</h5>
+                    <p class="card-text">Student registration app for registering courses. Made in Java. </p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#student_reg">
+                        See details
+                    </button>
+                    <a href="https://github.com/MichaelMauriceLee/Student-Registration-App" target="_blank"
+                       class="btn btn-primary"
+                       role="button">View Code
+                    </a>
+                    <div class="modal fade" id="student_reg" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Student Registration App</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="card-img-top " src="{% static 'images/student_rep_app.JPG' %}"
+                                         alt="Card image cap">
+                                    <p>
+                                        Student registration app for registering courses. Made in Java.
+                                    </p>
+                                    <p>
+                                        The app runs in the terminal, asks for the user if they are one of the few
+                                        registered students or the system admin, and then runs the app.
+                                    </p>
+                                    <p>
+                                        Features a main menu with abilities such as adding and removing course
+                                        offerings, looking up courses offered this semester, and check grades.
+                                    </p>
+                                    <p>
+                                        All files in the src folder.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                    </button>
+                                    <a href="https://github.com/MichaelMauriceLee/Student-Registration-App"
+                                       target="_blank"
+                                       class="btn btn-primary"
+                                       role="button">View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <a href="https://github.com/MichaelMauriceLee/Shiny-Colors-Bot-1920-x-1080" target="_blank"
-                   class="btn btn-primary btn-lg" role="button">Event-Driven Mobile Game Bot with GUI</a>
+        <div class="col top-buffer">
+            <div class="card mx-auto" style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'images/airplane_app_sm.JPG' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Airplane Reservation App</h5>
+                    <p class="card-text">Airline reservation app. Made in Java.</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#airplaneapp">
+                        See details
+                    </button>
+                    <a href="https://github.com/MichaelMauriceLee/Airline-Reservation-App" target="_blank"
+                       class="btn btn-primary"
+                       role="button">View Code
+                    </a>
+                    <div class="modal fade" id="airplaneapp" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Airline Reservation App</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="card-img-top " src="{% static 'images/airplane_app.JPG' %}"
+                                         alt="Card image cap">
+                                    <p>
+                                        Airline reservation app. Made in Java.
+                                    </p>
+                                    <p>
+                                        The app runs in the terminal. Features a main menu with abilities such as
+                                        reserving seats and checking a map of the available seats.
+                                    </p>
+                                    <p>
+                                        All files in the src folder.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                    </button>
+                                    <a href="https://github.com/MichaelMauriceLee/Airline-Reservation-App"
+                                       target="_blank"
+                                       class="btn btn-primary"
+                                       role="button">View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <p class="text-white bg-dark"> This website's source code</p>
-        <div class="row">
-            <div class="col">
-                <a href=https://github.com/MichaelMauriceLee/Michael_Lee_Digital_Website target="_blank"
-                   class="btn btn-primary btn-lg" role="button">View Code</a>
-            </div>
-        </div>
-{#    </div>#}
-
+    </div>
 {% endblock %}

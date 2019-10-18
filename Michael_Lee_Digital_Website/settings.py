@@ -25,7 +25,7 @@ SECRET_KEY = 'xaiu&gw)@hl%mw-an6rx720+u3s&lde6-kr@b^f5m)+^ad@8^='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True  # turn False when deploying, True when using manage.py
 
-ALLOWED_HOSTS = ['.michael-lee.digital', '157.230.150.53', '127.0.0.1']  # remove '127.0.0.1' in deploying, add when testing
+ALLOWED_HOSTS = ['.michael-lee.digital', '157.230.150.53' , '127.0.0.1']  # remove '127.0.0.1' in deploying, add when testing
 
 
 # Application definition
@@ -77,14 +77,8 @@ WSGI_APPLICATION = 'Michael_Lee_Digital_Website.wsgi.application'
 if DEBUG:
     DATABASES = {
         'default': {
-            # 'ENGINE': 'django.db.backends.sqlite3',
-            # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'michael_lee_digital_website',
-            'USER': 'postgres',
-            'PASSWORD': 'Instance023',
-            'HOST': 'localhost',
-            'PORT': '5432',
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
 
