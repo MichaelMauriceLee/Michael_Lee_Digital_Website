@@ -1,4 +1,5 @@
 class Calculator {
+    'use strict';
 
     constructor(previousOperandTextElement, currentOperandTextElement) {
         this.previousOperandTextElement = previousOperandTextElement;
@@ -23,19 +24,18 @@ class Calculator {
 
     chooseOperation(operation) {
         if (this.currentOperand === '') {
-            if (operation === '-'){
+            if (operation === '-') {
                 this.currentOperand = operation;
                 return
-            }
-            else{
-               return
+            } else {
+                return
             }
         }
-        if(this.currentOperand ==='-'){
+        if (this.currentOperand === '-') {
             return
         }
         if (this.previousOperand !== '') {
-            this.compute()
+            this.compute();
         }
         this.operation = operation;
         this.previousOperand = this.currentOperand;
@@ -72,8 +72,7 @@ class Calculator {
         this.currentOperandTextElement.innerText = this.currentOperand;
         if (this.operation != null) {
             this.previousOperandTextElement.innerText = `${this.previousOperand} ${this.operation}`;
-        }
-        else{
+        } else {
             this.previousOperandTextElement.innerText = this.previousOperand;
         }
     }
@@ -97,15 +96,15 @@ numberButtons.forEach(button => {
 })
 
 operationButtons.forEach(button => {
-    button.addEventListener('click', () =>{
+    button.addEventListener('click', () => {
         calculator.chooseOperation(button.innerText);
         calculator.updateDisplay();
     })
 })
 
 equalsButton.addEventListener('click', () => {
-        calculator.compute()
-        calculator.updateDisplay()
+    calculator.compute()
+    calculator.updateDisplay()
 })
 
 allClearButton.addEventListener('click', () => {
