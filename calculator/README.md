@@ -1,4 +1,4 @@
-#Calculator
+# Calculator
 
   In-browser calculator made with Javascript, HTML, and CSS.
   
