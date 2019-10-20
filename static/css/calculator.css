@@ -1,0 +1,31 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #00AAFF, #000000);
+    min-height: 100vh;
+    overflow: auto;
+}
+
+html {
+    min-height: 100%;
+}
+
+.container {
+    min-height: calc(100vh - 56px);
+    overflow: auto
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham, Sans-Serif;
+    font-weight: normal;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+}

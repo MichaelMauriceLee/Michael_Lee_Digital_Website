@@ -146,50 +146,52 @@
         </div>
         <div class="col top-buffer">
             <div class="card mx-auto" style="width: 18rem;">
-                <img class="card-img-top" src="{% static 'images/inventory_management_sm.JPG' %}" alt="Card image cap">
+                <img class="card-img-top" src="{% static 'images/calculator_sm.JPG' %}" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Inventory Management App</h5>
-                    <p class="card-text">Retail store inventory management app. Made in Java.</p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal"
-                            data-target="#inventorymanagement">
+                    <h5 class="card-title">Calculator</h5>
+                    <p class="card-text">In-browser calculator made with Javascript, HTML, and CSS.</p>
+                    <a href="/calculator" target="_blank"
+                       class="btn btn-primary bg-success"
+                       role="button">Open application
+                    </a>
+                    <button type="button" class="btn btn-primary top-buffer" data-toggle="modal"
+                            data-target="#calculator">
                         See details
                     </button>
-                    <a href="https://github.com/MichaelMauriceLee/Inventory-Management-App" target="_blank"
-                       class="btn btn-primary"
+                    <a href="https://github.com/MichaelMauriceLee/Michael_Lee_Digital_Website/tree/master/calculator"
+                       target="_blank"
+                       class="btn btn-primary top-buffer"
                        role="button">View Code
                     </a>
-                    <div class="modal fade" id="inventorymanagement" tabindex="-1" role="dialog"
+                    <div class="modal fade" id="calculator" tabindex="-1" role="dialog"
                          aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle">Inventory Management App</h5>
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Calculator</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <img class="card-img-top " src="{% static 'images/inventory_management.JPG' %}"
+                                    <img class="card-img-top " src="{% static 'images/calculator.JPG' %}"
                                          alt="Card image cap">
                                     <p>
-                                        Retail store inventory management app. Made in Java.
+                                        In-browser calculator made with Javascript, HTML, and CSS.
                                     </p>
                                     <p>
-                                        The app runs in the terminal. At startup, the app parses data from tools.txt and
-                                        suppliers.txt (which at like databases) and creates a list of these items to be
-                                        used in the app.
-                                    </p>
-                                    <p>
-                                        Features a main menu with abilities such as checking tool stock, creating orders
-                                        and writing the orders to orders.txt.
-                                    </p>
-                                    <p>
-                                        All files in the src folder.
+                                        This simple calculator runs in the browser. All elements of the calculator
+                                        (except for its placement on the page) has been coded using vanilla HTML, CSS,
+                                        and JS.
                                     </p>
                                 </div>
                                 <div class="modal-footer">
+                                    <a href="/calculator" target="_blank"
+                                       class="btn btn-primary bg-success"
+                                       role="button">Open application
+                                    </a>
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <a href="https://github.com/MichaelMauriceLee/Inventory-Management-App"
+                                    <a href="https://github.com/MichaelMauriceLee/Michael_Lee_Digital_Website/tree/master/calculator"
                                        target="_blank"
                                        class="btn btn-primary"
                                        role="button">View Code
@@ -313,6 +315,65 @@
                 </div>
             </div>
         </div>
+        <div class="col top-buffer">
+            <div class="card mx-auto" style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'images/inventory_management_sm.JPG' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Inventory Management App</h5>
+                    <p class="card-text">Retail store inventory management app. Made in Java.</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#inventorymanagement">
+                        See details
+                    </button>
+                    <a href="https://github.com/MichaelMauriceLee/Inventory-Management-App" target="_blank"
+                       class="btn btn-primary"
+                       role="button">View Code
+                    </a>
+                    <div class="modal fade" id="inventorymanagement" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Inventory Management App</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="card-img-top " src="{% static 'images/inventory_management.JPG' %}"
+                                         alt="Card image cap">
+                                    <p>
+                                        Retail store inventory management app. Made in Java.
+                                    </p>
+                                    <p>
+                                        The app runs in the terminal. At startup, the app parses data from tools.txt and
+                                        suppliers.txt (which at like databases) and creates a list of these items to be
+                                        used in the app.
+                                    </p>
+                                    <p>
+                                        Features a main menu with abilities such as checking tool stock, creating orders
+                                        and writing the orders to orders.txt.
+                                    </p>
+                                    <p>
+                                        All files in the src folder.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a href="https://github.com/MichaelMauriceLee/Inventory-Management-App"
+                                       target="_blank"
+                                       class="btn btn-primary"
+                                       role="button">View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
         <div class="col top-buffer">
             <div class="card mx-auto" style="width: 18rem;">
                 <img class="card-img-top" src="{% static 'images/airplane_app_sm.JPG' %}" alt="Card image cap">
