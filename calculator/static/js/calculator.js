@@ -118,3 +118,47 @@ deleteButton.addEventListener('click', () => {
 })
 
 
+window.addEventListener('keydown', (num) => {
+    //decimal
+     if (num.code == 'NumpadDecimal' || num.code == 'Period') {
+        calculator.appendNumber('.');
+        calculator.updateDisplay();
+    }
+     //operations
+      if (num.code == 'NumpadAdd'){
+        calculator.chooseOperation('+');
+        calculator.updateDisplay();
+    }
+    if (num.code == 'NumpadSubtract' || num.code == 'Minus'){
+        calculator.chooseOperation('-');
+        calculator.updateDisplay();
+    }
+    if (num.code == 'NumpadMultiply'){
+        calculator.chooseOperation('*');
+        calculator.updateDisplay();
+    }
+    if (num.code == 'NumpadDivide' || num.code == 'Slash'){
+        calculator.chooseOperation('÷');
+        calculator.updateDisplay();
+    }
+    //equals
+    if (num.code == 'NumpadEnter' || num.code == 'Equal'){
+        calculator.compute();
+        calculator.updateDisplay();
+    }
+    //delete
+    if (num.code == 'Backspace'){
+        calculator.delete();
+        calculator.updateDisplay();
+    }
+    //numbers using numpad and regular digits
+    else{
+        let digit = num.code.match(/\d/g);
+        calculator.appendNumber(digit);
+        calculator.updateDisplay();
+    }
+})
+
+
+
+
