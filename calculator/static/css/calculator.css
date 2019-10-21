@@ -41,6 +41,10 @@ body {
     grid-column: span 2;
 }
 
+.span-four {
+    grid-column: span 4;
+}
+
 .output {
     grid-column: 1 / -1;
     background-color: rgba(0 , 0, 0, .75);
@@ -61,6 +65,20 @@ body {
 .output .current-operand {
     color: rgba(255, 255, 255, .75);
     font-size: 2.5rem;
+}
+
+.history {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4,100px);
+    box-sizing: border-box;
+    font-family: Gotham, Sans-Serif;
+    font-weight: bold;
+}
+
+.history-output {
+    display: None;
 }
 
 .top-buffer {
