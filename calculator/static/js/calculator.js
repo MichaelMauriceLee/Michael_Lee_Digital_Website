@@ -95,11 +95,11 @@ const outputTextElement = document.querySelector('[data-history-output]')
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement, outputTextElement);
 
 function myFunction() {
-  var x = document.getElementsByClassName("history-output");
-  if (x.style.display === "block") {
-    x.style.display = "none";
+    const x = document.getElementsByClassName("history-output");
+    if (x[0].style.display === "block") {
+    x[0].style.display = "none";
   } else {
-    x.style.display = "block";
+    x[0].style.display = "block";
   }
 }
 
